@@ -1,0 +1,35 @@
+1. global.console.log("Sachin")        // is equivalent to console.log("Sachin")
+
+
+2. In node environment, all the global objects can be used via global object and in browser can be used via window object
+
+3. Functions or variables defined locally are not added to global object
+
+4. In browser side js, every var or func declared gets added to global. But, it has a problem that if two var with same names are declared     
+   in 2 modules, they get overwritten
+
+5. Module: Every file in a node is called module. The var and func defined in that module are scoped to that file.
+  In every Module we have a module object which has different useful attributes.
+      Module {
+      id: '.',
+      path: 'd:\\javascript\\code\\first-app',
+      exports: {},
+      filename: 'd:\\javascript\\code\\first-app\\logger.js',
+      loaded: false,
+      children: [],
+      paths: [
+         'd:\\javascript\\code\\first-app\\node_modules',
+         'd:\\javascript\\code\\node_modules',
+         'd:\\javascript\\node_modules',
+         'd:\\node_modules'
+      ]
+      }
+
+6. require function: The basic functionality of require is that it reads a JavaScript file, executes the file, and then proceeds to return the exports object
+
+7. jshint app.js in the terminal gives all the errors.
+
+8. Module Wrapper Function: Node executes each file by a function called mwf. 
+   function(exports, require, module, __filename, __dirname){
+
+   }
